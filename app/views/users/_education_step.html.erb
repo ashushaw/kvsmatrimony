@@ -1,0 +1,21 @@
+<div class="form-group">
+
+<div class="control-label col-sm-2">
+
+    <%= f.label :education %>
+      </div>    
+      <div class="col-sm-8">
+      <%= f.select :education, User::EDUCATION_OPTION,{} ,{:class => 'form-control'}%> 
+  </div>
+    </div>
+    
+ <div class="form-group">
+
+<div class="control-label col-sm-2">
+
+    <%= f.label :occupation %>
+     </div>
+    <div class="col-sm-8">
+     <%= f.text_field :occupation, id: :occupation ,rows: 10, class: "form-control"%> 
+  </div>
+    </div>

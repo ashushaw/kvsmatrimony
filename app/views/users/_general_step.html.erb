@@ -1,0 +1,48 @@
+<div class="form-group">
+
+<div class="control-label col-sm-2">
+<%= f.label :name %>
+</div>
+
+<div class="col-sm-8">
+    
+<%= f.text_field :name, id: :user_name ,rows: 10, class: "form-control", placeholder: "Name"%>
+</div>
+      
+    </div>
+   <div class="form-group">
+
+<div class="control-label col-sm-2">
+     
+    <%= f.label :sex %>
+  </div>
+    <div class="col-sm-8">    
+    <%= f.select(:sex, User::SEX, {} ,{:class => 'form-control'})%>
+  </div>
+    </div>
+    
+    
+<div class="form-group">
+
+<div class="control-label col-sm-2">
+
+    <%= f.label :age %>
+    </div>
+     <div class="col-sm-8 col-md-4"> 
+    <%= f.number_field :age, id: :user_age ,rows: 10, class: "form-control", placeholder: "Age" %>
+  </div>
+    </div>    
+
+<div class="form-group"> 
+
+<div class="control-label col-sm-2">
+
+    <%= f.label :dob %>
+    </div>
+    <div class="col-sm-8 col-md-4">
+    <%= f.date_select :dob , {:order => [:day, :month, :year], 
+    :start_year => 1920} , {:class => "form-control height"}%>
+        
+       
+  </div>
+    </div>

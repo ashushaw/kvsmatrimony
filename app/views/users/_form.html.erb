@@ -1,0 +1,142 @@
+<%= render 'shared/errors', obj: @user %>
+
+<div class='row'>
+
+<div class='col-xs-12'>
+    
+<%= form_for(@user, :html => {class: "form-horizontal", role: "form"}) do |f| %>
+
+  <div class="form-group">
+
+<div class="control-label col-sm-2">
+<%= f.label :name %>
+</div>
+
+<div class="col-sm-8">
+    
+<%= f.text_field :name, id: :user_name ,rows: 10, class: "form-control", placeholder: "Name"%>
+</div>
+      
+    </div>
+   <div class="form-group">
+
+<div class="control-label col-sm-2">
+     
+    <%= f.label :sex %>
+  </div>
+    <div class="col-sm-8">    
+    <%= f.select(:sex, User::SEX, {} ,{:class => 'form-control'})%>
+  </div>
+    </div>
+    
+    
+<div class="form-group">
+
+<div class="control-label col-sm-2">
+
+    <%= f.label :age %>
+    </div>
+     <div class="col-sm-8 col-md-4"> 
+    <%= f.number_field :age, id: :user_age ,rows: 10, class: "form-control", placeholder: "Age" %>
+  </div>
+    </div>    
+
+<div class="form-group">
+
+<div class="control-label col-sm-2">
+
+    <%= f.label :dob %>
+    </div>
+    <div class="col-sm-8 col-md-4">
+    <%= f.date_select :dob , {:order => [:day, :month, :year], 
+    :start_year => 1920} , {:class => "form-control height"}%>
+        
+       
+  </div>
+    </div>
+<div class="form-group">
+
+<div class="control-label col-sm-2">
+
+    <%= f.label :height %>
+    
+    </div>
+    <div class="col-sm-8 col-md-4 height">
+    <%= f.number_field :height_feet, id: :height_feet ,rows: 10, class: "form-control height", placeholder: "feet"%>
+    
+    <%= f.number_field :height_inch, id: :height_inch ,rows: 10, class: "form-control height", placeholder: "inch"%> 
+    
+    </div>
+  </div>
+
+<div class="form-group">
+
+<div class="control-label col-sm-2">
+    <%= f.label :mother_tongue %>
+    </div>       
+       <div class="col-sm-8">
+    <%= f.text_field :language, id: :user_language,rows: 10, class: "form-control", placeholder: "Mother Tongue"%>
+  	</div>
+    </div>
+
+<script src="countries.js"></script>
+
+<div class="form-group">
+
+<div class="control-label col-sm-2">
+
+    <%= f.label :country %>
+    
+     </div>
+  
+ <div class="col-sm-8">    
+<select id="user_country" name="user[country]" class="form-control"></select>
+    </div>   
+    </div>
+    <div class="form-group">
+    <div class="control-label col-sm-2">
+
+     <%= f.label :city %>
+    
+     </div>
+ <div class="col-sm-8">     
+<select id="user_city" name="user[city]" class="form-control"></select>
+     </div>
+    </div>    
+
+<script language="javascript">
+	populateCountries("user_country", "user_city"); // first parameter is id of country drop-down and second parameter is id of state drop-down
+	
+</script>
+
+  <div class="form-group">
+
+<div class="control-label col-sm-2">
+
+    <%= f.label :education %>
+      </div>    
+      <div class="col-sm-8">
+      <%= f.select :education, User::EDUCATION_OPTION,{} ,{:class => 'form-control'}%> 
+  </div>
+    </div>
+    
+ <div class="form-group">
+
+<div class="control-label col-sm-2">
+
+    <%= f.label :occupation %>
+     </div>
+    <div class="col-sm-8">
+     <%= f.text_field :occupation, id: :occupation ,rows: 10, class: "form-control"%> 
+  </div>
+    </div>
+  
+    
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+    
+<% end %>
+
+</div> 
+    </div> 

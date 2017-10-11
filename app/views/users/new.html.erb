@@ -1,0 +1,16 @@
+<h1>New User</h1>
+
+
+
+
+<%= render 'shared/errors', obj: @user %>
+
+
+<%= form_for(@user, :html => {class: "form-horizontal", role: "form"}) do |f| %>
+  
+  <%= render "#{@user.current_step}_step", :f => f %>
+  <p><%= f.submit "Continue" %></p>
+  <p><%= f.submit "Back", :name => "back_button" unless @user.first_step? %></p>
+<% end %>
+
+<%= link_to 'Back', users_path %>
