@@ -8,7 +8,30 @@
       <%= f.select :education, User::EDUCATION_OPTION,{} ,{:class => 'form-control'}%> 
   </div>
     </div>
+
+<div class="form-group">
+
+<div class="control-label col-sm-2">
+
+    <%= f.label :education_field %>
+      </div>    
+      <div class="col-sm-8">
+      <%= f.select :education_field, User::EDUCATION_FIELD,{} ,{:class => 'form-control'}%> 
+  </div>
+    </div>
     
+<div class="form-group">
+
+<div class="control-label col-sm-2">
+
+    <%= f.label :college_attended %>
+      </div>    
+      <div class="col-sm-8">
+      <%= f.text_area :college_attended, :class => 'form-control', placeholder: "College Attended"%> 
+  </div>
+    </div>
+
+
  <div class="form-group">
 
 <div class="control-label col-sm-2">
@@ -16,6 +39,17 @@
     <%= f.label :occupation %>
      </div>
     <div class="col-sm-8">
-     <%= f.text_field :occupation, id: :occupation ,rows: 10, class: "form-control"%> 
+     <%= f.text_field :occupation, id: :occupation ,class: "form-control",placeholder: "Occupation"%> 
+  </div>
+    </div>
+
+ <div class="form-group">
+
+<div class="control-label col-sm-2">
+
+    <%= f.label :annual_income %>
+     </div>
+    <div class="col-sm-8">
+     <%= f.select :annual_income, User::ANNUAL_INCOME,{} ,{:class => 'form-control'}%> 
   </div>
     </div>

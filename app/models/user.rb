@@ -15,9 +15,24 @@ SEX = ["Male" , "Female" , "Other"]
     
 EDUCATION_OPTION = ["Doctorate","Masters","Honours degree","Bachelors","Undergraduate","Associates degree","Diploma","High school","Less than high school","Trade school"]  
     
+EDUCATION_FIELD = ["Advertising/ Marketing","Administrative services","Architecture","Armed Forces","Arts","Commerce","Computers/ IT","Education","Engineering/ Technology","Finance","Fine Arts","Home Science","Law","Management","Medicine","Nursing/ Health Sciences","Office administration","Science","Shipping","Travel &amp; Tourism"]
     
+ANNUAL_INCOME=["Upto INR 1 Lakh","INR 1 Lakh to 2 Lakh","INR 2 Lakh to 4 Lakh","INR 4 Lakh to 7 Lakh","INR 7 Lakh to 10 Lakh","INR 10 Lakh to 15 Lakh","INR 15 Lakh to 20 Lakh","INR 20 Lakh to 30 Lakh","INR 30 Lakh to 50 Lakh","INR 50 Lakh to 75 Lakh","INR 75 Lakh to 1 Crore","INR 1 Crore &amp; above"]
+    
+SKIN_TONE = ["Very Fair","Fair","Wheatish","Dark"]
+    
+BODY_TYPE = ["Slim","Athletic","Average","Heavy"]    
+  
+DIET=["Veg","Non-Veg","Occasionally Non-Veg","Eggetarian","Jain","Vegan"]   
+    
+MARITAL_STATUS = ["Never Married","Divorced","Widowed","Awaiting Divorce","Annulled"]
 
-  def commands=(commands)
+RASHI =["Mesh(Aries)","Vrishabh (Taurus)","Mithun (Gemini)","Kark (Cancer)","Simha (Leo)","Kanya (Virgo)","Tula (Libra)","Vrishchik (Scorpio)","Dhanu (Sagittarius)","Makar (Capricorn)","Kumbh (Aquarius)","Meen (Pisces)"]
+
+
+has_secure_password    
+    
+    def commands=(commands)
     commands.reject(&:blank?)
   end
 
@@ -27,7 +42,7 @@ def current_step
 end
 
 def steps
-  %w[general personal education]
+  %w[general personal education lifestyle]
 end
 
 def next_step

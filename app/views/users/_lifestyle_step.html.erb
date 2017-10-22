@@ -1,0 +1,80 @@
+<div class="form-group">
+
+<div class="control-label col-sm-2">
+
+    <%= f.label :height %>
+    
+    </div>
+    <div class="col-sm-8 col-md-4 height">
+    <%= f.number_field :height_feet, id: :height_feet , class: "form-control", placeholder: "feet"%>
+    
+    <%= f.number_field :height_inch, id: :height_inch ,class: "form-control", placeholder: "inch"%> 
+    
+    </div>
+  </div>
+
+<div class="form-group">
+
+<div class="control-label col-sm-2">
+
+    <%= f.label :skin_tone %>
+      </div>    
+      <div class="col-sm-8">
+      <%= f.select :skin_tone, User::SKIN_TONE,{} ,{:class => 'form-control'}%> 
+  </div>
+    </div>
+
+<div class="form-group">
+
+<div class="control-label col-sm-2">
+
+    <%= f.label :diet %>
+      </div>    
+      <div class="col-sm-8">
+      <%= f.select :diet, User::DIET,{} ,{:class => 'form-control'}%> 
+  </div>
+    </div>
+
+<div class="form-group">
+
+<div class="control-label col-sm-2">
+
+    <%= f.label :body_type %>
+      </div>    
+      <div class="col-sm-8">
+      <%= f.select :body_type, User::BODY_TYPE,{} ,{:class => 'form-control'}%> 
+  </div>
+    </div>
+
+<div class="form-group">
+
+<div class="control-label col-sm-2">
+
+    <%= f.label :rashi %>
+      </div>    
+      <div class="col-sm-8">
+      <%= f.select :rashi, User::RASHI,{} ,{:class => 'form-control'}%> 
+  </div>
+    </div>
+
+<div class="form-group">
+
+<div class="control-label col-sm-2">
+
+    <%= f.label :marital_status %>
+      </div>    
+      <div class="col-sm-8">
+      <%= f.select :marital_status, User::MARITAL_STATUS,{} ,{:class => 'form-control'}%> 
+  </div>
+    </div>
+
+<div class="form-group">
+
+<div class="control-label col-sm-2">
+
+    <%= f.label :describe_youself %>
+      </div>    
+      <div class="col-sm-8">
+      <%= f.text_area :describe_yourself, rows: 10,class: "form-control",  placeholder: "Describe Yourself"%> 
+  </div>
+    </div>
