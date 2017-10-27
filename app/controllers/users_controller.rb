@@ -4,8 +4,8 @@ before_action :require_same_user, only: [:edit, :update, :destroy]
   # GET /users
   # GET /users.json
   def index
-    @users = User.all
-  end
+  @users = User.search(params[:search])
+end
 
   # GET /users/1
   # GET /users/1.json
@@ -36,8 +36,11 @@ def create
     render "new"
   else
     session[:user_step] = session[:user_params] = nil
-    flash[:notice] = "user saved!"
-    redirect_to @user
+     # session[:user_id] = @user.id
+
+#flash[:success] = "Welcome to the alpha blog #{@user.username}"
+    flash[:notice] = "Profile Created , Please Login to Continue"
+    redirect_to login_path
   end
 end
     def edit
@@ -82,6 +85,7 @@ end
     end
   end
 
+   
   # DELETE /users/1
   # DELETE /users/1.json
   def destroy
