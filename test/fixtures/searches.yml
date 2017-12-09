@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  keywords: MyString
+  sex: MyString
+  age_min: MyString
+  age_max: 1
+  city: MyString
+
+two:
+  keywords: MyString
+  sex: MyString
+  age_min: MyString
+  age_max: 1
+  city: MyString

@@ -13,6 +13,7 @@ end
   end
     
 def new
+  
   session[:user_params] ||= {}
   @user = User.new(session[:user_params])
   @user.current_step = session[:user_step]

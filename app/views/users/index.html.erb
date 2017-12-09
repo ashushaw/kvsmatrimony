@@ -9,73 +9,101 @@
   </p>
 <% end %>
   
+<p><%= link_to "Advanced Search", new_search_path %></p>
+
+
+<% @users.each do |user| %>
+
+<div class="card">
+<div class="card-block">
 <table>
-  
-  <div class="card">
-    <% @users.each do |user| %>
-      
 
-
-    
-       
-
-
-
-        <tr>
+    <div class="container">
+      <tr>
+        
          <th>Name</th>  
         <td><%= user.name %></td>
       </tr>  
+    </div>
+
+    <div class="container">
+
       <tr>
         <th>Sex</th>
         <td><%= user.sex %></td>
       </tr>
+    </div>
+    <div class="container">
+
       <tr>
           <th>Age</th>
           <td><%= user.age %></td>
       </tr>
+    </div>
+    <div class="container">
       <tr>
           <th>DOB</th> 
           <td><%= user.dob.strftime("%d-%m-%Y")%></td>  
       </tr>
+    </div>
+      <div class="container">
       <tr>
           <th>Country</th>
           <td><%= user.country %></td>
       </tr>
+    </div>
+      <div class="container">
       <tr>
           <th>City</th>
-          <td><%= user.city %></td>  
+          <td><%= user.
+          city %></td>  
       </tr>
+    </div>
+
+      <div class="container">
       <tr>
           <th>Height</th>
           <td><%= user.height_feet%> ft <%=user.height_inch%> inch</td>
       </tr>
+       </div>
+      <div class="container">
       <tr>
           <th>Language</th>
           <td><%= user.language %></td>
       </tr>
+</div>
+      <div class="container">
       <tr>
           <th>Education</th>
           <td><%= user.education %></td>
       </tr>
+</div>
+      <div class="container">
       <tr>
           <th>Occupation</th>
           <td><%= user.occupation%></td>
       </tr>
+</div>
+      <div class="container">
       <tr>
           <td><%= link_to 'Show', user %></td>
           <td><%= link_to 'Edit', edit_user_path(user) %></td>
           <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
-              
-      </div>
+       </div>  
+           
+      
           
     
     
-    <% end %>
+   
 
        
 </table>
+</div>
+</div>
 
+<% end %>
 
 <br>
 

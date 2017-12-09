@@ -1,0 +1,63 @@
+<h1>Search Results</h1>
+
+<% if @search.search_users.empty? %>
+  <p> No Records Found</p>
+
+<% else %>
+ <% @search.search_users.each do |c|%>
+   <br>
+   <p>
+  <strong>Name:</strong>
+  <%= c.name %>
+</p>
+
+<p>
+  <strong>Sex:</strong>
+  <%= c.sex %>
+</p>
+
+<p>
+  <strong>Age:</strong>
+  <%= c.age %>
+</p>
+
+<p>
+  <strong>DOB:</strong>
+  <%= c.dob %>
+</p>
+
+<p>
+  <strong>Country:</strong>
+  <%= c.country %>
+</p>
+
+<p>
+  <strong>State:</strong>
+  <%= c.city %>
+</p>
+
+<p>
+  <strong>Education:</strong>
+  <%= c.education %>
+</p>
+
+<p>
+  <strong>Height:</strong>
+  <%= c.height_feet %> ft <%= c.height_inch %> inch
+    
+</p>
+
+<p>
+  <strong>Language:</strong>
+  <%= c.language %>
+</p>
+
+<p>
+  <strong>Occupation:</strong>
+  <%= c.occupation %>
+</p>
+  <% end %>   
+
+<% end %>
+
+

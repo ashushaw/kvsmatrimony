@@ -16,6 +16,7 @@ post 'login', to: 'sessions#create'
 
 get 'logout', to: 'sessions#destroy'
     
+resources :searches    
 resources :sessions
 resources :password_resets    
         
