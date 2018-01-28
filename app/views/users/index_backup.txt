@@ -1,0 +1,196 @@
+<!--
+    <table cellpadding="2" border="1" style="width:40%;">
+
+        <div class="container">
+          <tr>
+            
+             <th class="labelLeft" width="40%">Name</th>  
+            <td><%=# user.name %></td>
+          </tr>  
+        </div>
+
+        <div class="container">
+
+          <tr>
+            <th class="labelLeft">Sex</th>
+            <td><%= user.sex %></td>
+          </tr>
+        </div>
+        <div class="container">
+
+          <tr>
+              <th class="labelLeft">Age</th>
+              <td><%= user.age %></td>
+          </tr>
+        </div>
+        <div class="container">
+          <tr>
+              <th class="labelLeft">DOB</th> 
+              <td><%=# user.dob.strftime("%d-%m-%Y")%></td>  
+          </tr>
+        </div>
+          <div class="container">
+          <tr>
+              <th class="labelLeft">Country</th>
+              <td><%= user.country %></td>
+          </tr>
+
+-->
+
+
+
+        <!--
+          <div class="container">
+          <tr>
+              <th>City</th>
+              <td><%= user.
+              city %></td>  
+          </tr>
+        </div>
+
+          <div class="container">
+          <tr>
+              <th>Height</th>
+              <td><%= user.height_feet%> ft <%=user.height_inch%> inch</td>
+          </tr>
+           </div>
+          <div class="container">
+          <tr>
+              <th>Language</th>
+              <td><%= user.language %></td>
+          </tr>
+    </div>
+          <div class="container">
+          <tr>
+              <th>Education</th>
+              <td><%= user.education %></td>
+          </tr>
+    </div>
+          <div class="container">
+          <tr>
+              <th>Occupation</th>
+              <td><%= user.occupation%></td>
+          </tr>
+    </div>
+          <div class="container">
+          
+           </div>  
+          -->     
+          
+
+  <!--
+     <div class="card-block">
+        
+     <div class="user-card-image d-inline-block"><img src="http://placehold.it/150x150" class="img-circle"></div>
+        
+        
+          
+
+          
+     <div class="user-card-content text-nowrap d-inline-block">
+           <table width="90%" border="0" cellpadding="0" cellspacing="0">
+            
+            
+               <div class="card-text">
+                 <tr>
+                    <th>Name</th>  
+                    <td><%= #user.name %></td>
+                 </tr>  
+               </div>
+
+               <div class="card-text">
+                 <tr>
+                   <th>Sex</th>
+                   <td><%= user.sex %></td>
+                 </tr>
+               </div>
+               <div class="card-text">
+
+                 <tr>
+                     <th>Age</th>
+                     <td><%= user.age %></td>
+                 </tr>
+               </div>
+               <div class="card-text">
+                 <tr>
+                     <th>DOB</th> 
+                     <td><%=# user.dob.strftime("%d-%m-%Y")%></td>  
+                 </tr>
+               </div>
+                 <div class="card-text">
+                 <tr>
+                     <th>Country</th>
+                     <td><%= user.country %></td>
+                 </tr>
+               </div>
+                 <div class="card-text">
+                 <tr>
+                     <th>City</th>
+                     <td><%= user.
+                     city %></td>  
+                 </tr>
+               </div>
+
+                 <div class="card-text">
+                 <tr>
+                     <th>Height</th>
+                     <td><%= user.height_feet%> ft <%=user.height_inch%> inch</td>
+                 </tr>
+                  </div>
+                 <div class="card-text">
+                 <tr>
+                     <th>Language</th>
+                     <td><%= user.language %></td>
+                 </tr>
+               </div>
+
+                 <div class="card-text">
+                     <tr>
+                         <th>Education</th>
+                         <td><%= user.education %></td>
+                     </tr>
+                 </div>
+                 <div class="card-text">
+                     <tr>
+                         <th>Occupation</th>
+                         <td><%= user.occupation%></td>
+                     </tr>
+                 </div>
+           </table>
+
+     </div>       
+     
+  </div>
+-->
+
+<!--<table width="70%" border="0" cellspacing="0" cellpadding="0">
+                                    <tbody><tr>
+                                      <td width="18%" height="19"><p>Religion</p></td>
+                                      <td width="2%"><p>:</p></td>
+                                      <td width="43%"><p>Hindu</p></td>
+                                      <td width="37%" align="right">
+                                    <p></p>
+                                     <p></p>
+                                    </td>
+                                    </tr>
+                                    <tr>
+                                      <td height="19"><p>Location</p></td>
+                                      <td><p>:</p></td>
+                                      <td colspan="2"><p>Samastipur,&nbsp;Bihar</p></td>
+                                    </tr>
+                                    <tr>
+                                      <td height="19"><p >Education</p></td>
+                                      <td width="2%"><p >:</p></td>
+                                      <td colspan="2"><p>Bachelors - Arts/ Science/ Commerce/ Others,&nbsp;B.A</p></td>
+                                    </tr>
+                                    <tr>
+                                      <td height="19"><p>Occupation</p></td>
+                                      <td><p>:</p></td>
+                                      <td colspan="2"><p>Not Working,&nbsp;Not working</p></td>
+                                    </tr>
+                                    <tr>
+                                      <td height="19">&nbsp;</td>
+                                      <td>&nbsp;</td>
+                                      <td colspan="2">&nbsp;</td>
+                                    </tr>
+                                  </tbody></table>-->

@@ -1,110 +1,111 @@
-<p id="notice"><%= notice %></p>
+		<p id="notice"><%= notice %></p>
 
-<h1>Users</h1>
+		<h1>Users</h1>
 
-<%= form_tag users_path, :method => 'get' do %>
-  <p>
-    <%= text_field_tag :search, params[:search] %>
-    <%= submit_tag "Search", :name => nil %>
-  </p>
-<% end %>
-  
-<p><%= link_to "Advanced Search", new_search_path %></p>
+		<%= form_tag users_path, :method => 'get' do %>
+		  <p>
+		    <%= text_field_tag :search, params[:search] %>
+		    <%= submit_tag "Search", :name => nil %>
+		  </p>
+		<% end %>
+		  
+		<p><%= link_to "Advanced Search", new_search_path %></p>
 
 
-<% @users.each do |user| %>
+		<% @users.each do |user| %>
 
-<div class="card">
-<div class="card-block">
-<table>
 
-    <div class="container">
-      <tr>
-        
-         <th>Name</th>  
-        <td><%= user.name %></td>
-      </tr>  
-    </div>
 
-    <div class="container">
 
-      <tr>
-        <th>Sex</th>
-        <td><%= user.sex %></td>
-      </tr>
-    </div>
-    <div class="container">
+		  
 
-      <tr>
-          <th>Age</th>
-          <td><%= user.age %></td>
-      </tr>
-    </div>
-    <div class="container">
-      <tr>
-          <th>DOB</th> 
-          <td><%= user.dob.strftime("%d-%m-%Y")%></td>  
-      </tr>
-    </div>
-      <div class="container">
-      <tr>
-          <th>Country</th>
-          <td><%= user.country %></td>
-      </tr>
-    </div>
-      <div class="container">
-      <tr>
-          <th>City</th>
-          <td><%= user.
-          city %></td>  
-      </tr>
-    </div>
 
-      <div class="container">
-      <tr>
-          <th>Height</th>
-          <td><%= user.height_feet%> ft <%=user.height_inch%> inch</td>
-      </tr>
-       </div>
-      <div class="container">
-      <tr>
-          <th>Language</th>
-          <td><%= user.language %></td>
-      </tr>
-</div>
-      <div class="container">
-      <tr>
-          <th>Education</th>
-          <td><%= user.education %></td>
-      </tr>
-</div>
-      <div class="container">
-      <tr>
-          <th>Occupation</th>
-          <td><%= user.occupation%></td>
-      </tr>
-</div>
-      <div class="container">
-      <tr>
-          <td><%= link_to 'Show', user %></td>
-          <td><%= link_to 'Edit', edit_user_path(user) %></td>
-          <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-       </div>  
-           
-      
-          
-    
-    
-   
+		<div class="w3-container box">
+		  
 
-       
-</table>
-</div>
-</div>
+		  <div class="w3-card w3-hover-shadow" style="width:70%">
+		    <header class="w3-container w3-light-grey">
+		      <h3><%= user.name %></h3>
+		    </header>
+		    <div class="w3-container " >
+		  
+		    	<img src="http://placehold.it/150x150" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:180px" align="left">
 
-<% end %>
 
-<br>
 
-<%= link_to 'New User', new_user_path %>
+		    	<table width="60%" border="0" cellspacing="0" cellpadding="0">
+								
+		    			<!--
+								<tr>
+		    	        <th class="labelLeft">Sex</th>
+		    	        <td><%= user.sex %></td>
+		    	      </tr>
+		    	    -->
+		    	    	
+
+		    	      <tr>
+		    	          <th class="labelLeft" width="40%" height="19">Age</th>
+		    	          <td><%= user.age %></td>
+		    	      </tr>
+		    	    
+		    	    <!--
+		    	      <tr>
+		    	          <th class="labelLeft">DOB</th> 
+		    	          <td><#%= user.dob.strftime("%d-%m-%Y")%></td>  
+		    	      </tr>
+		    	    -->
+		    	    
+		    	      <tr>
+		    	          <th class="labelLeft" height="19">Location</th>
+		    	          <td><%= user.city %> , <%= user.country %> </td>
+		    	      </tr>
+		    	      <!--
+		    	      <tr>
+		    	          <th>City</th>
+		    	          <td><%= user.city %></td>  
+		    	      </tr>
+							-->
+
+		    	      <tr>
+		    	          <th class="labelLeft" height="19">Height</th>
+		    	          <td><%= user.height_feet%> <b>'</b> <%=user.height_inch%><b>"</b></td>
+		    	      </tr>
+
+		    	      <tr>
+		    	          <th class="labelLeft" height="19">Language</th>
+		    	          <td><%= user.language %></td>
+		    	      </tr>
+
+		    	      <tr>
+		    	          <th class="labelLeft" height="19">Education</th>
+		    	          <td><%= user.education %></td>
+		    	      </tr>
+
+		    	      <tr>
+		    	          <th class="labelLeft" height="19">Occupation</th>
+		    	          <td><%= user.occupation%></td>
+		    	      </tr>
+
+		    	      
+		    	     <tr>
+		    	         <td class="labelLeft"><%= link_to 'Show', user %></td>
+		    	         <td class="labelLeft"><%= link_to 'Edit', edit_user_path(user) %></td>
+		    	         <td class="labelLeft"><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+		    	     </tr> 	
+		    	    
+		    	  </table>      
+		</div>
+
+		</div>
+		</div>
+
+		<% end %>
+
+		<br>
+
+		<%= link_to 'New User', new_user_path %>
+
+
+
+
+		

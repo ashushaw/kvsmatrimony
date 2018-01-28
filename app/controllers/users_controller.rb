@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  
   before_action :set_user, only: [:show, :edit, :update, :destroy]
 before_action :require_same_user, only: [:edit, :update, :destroy]
   # GET /users
@@ -102,6 +103,11 @@ end
     def set_user
       @user = User.find(params[:id])
     end
+
+    def logged_in?
+     !!current_user
+    end
+    
 
 def require_same_user
     if current_user != @user

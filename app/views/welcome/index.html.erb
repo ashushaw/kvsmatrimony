@@ -14,8 +14,37 @@
   <p> Find Your Match</p>
   
   <p class="btn btn-primary btn-lg"  role="button"><%= link_to "Advanced Search", new_search_path %></p>
+
+
 </div>
 </div>
+
+<h1> Search</h1>
+
+<%= form_for(Search.new, :html => {class: "form-horizontal", role: "form"}) do |f| %>
+
+  <div class="field">
+    <%= f.label :keywords %><br />
+    <%= f.text_field :keywords %>
+  </div>
+    <div class="field">
+    <%= f.label :sex %><br />
+    <%= f.select(:sex, User::SEX, {} ,{:class => 'form-control'})%>
+    
+  </div>
+  <div class="field">
+    <%= f.label :age_min, "Age Range" %><br />
+    <%= f.text_field :age_min, size: 10 %> -
+    <%= f.text_field :age_max, size: 10 %>
+  </div>
+
+  <div class="field">
+    <%= f.label :city,"City" %><br />
+    <%= f.text_field :city, size: 10 %>
+  </div>
+  <div class="actions"><%= f.submit "Search" %></div>
+<% end %>
+
 
 
     </body>
